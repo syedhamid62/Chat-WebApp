@@ -1,6 +1,6 @@
 import axios from "axios";
-
+console.log(import.meta.env.VITE_BASE_URL)
 export const axiosInstance = axios.create({
-  baseURL: import.meta.env.MODE === "development" ? "http://localhost:5001/api" : "https://chat-webapp-xzvs.onrender.com/api",
+  baseURL: `${import.meta.env.VITE_BASE_URL}/api`,
   withCredentials: true,
 });
